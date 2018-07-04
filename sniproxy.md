@@ -2,7 +2,7 @@
 
 The SNI Proxy server is installed on the Proxy. It will compute the HMAC-SHA256 of the Client ID in the hostname. 
 
-The hostname should consist of Client ID and base32 encoded HMAC-SHA256. They have to 10, 52 bytes repectively, separated with a hyphen `-`.
+The hostname should consist of Client ID and base32 encoded HMAC-SHA256. They have to 10, 52 bytes respectively, separated with a hyphen `-`.
 
 For example, this is a valid format:
 
@@ -18,7 +18,7 @@ For example, this is a valid format:
 The Client ID is a 10-byte case-insensitive alphanumeric id.
 
 Possible issues:
-- The entrophy of Client ID is 2^50. If it's genrated randomly, there may be collision when the Client ID is more than 2^25 (33 millions).
+- The entropy of Client ID is 2^50. If it's generated randomly, there may be collision when the Client ID is more than 2^25 (33 millions).
 - ISP or a middlebox can leverage the Client ID/HMAC signature to trace the user.
 
 ### Base32 Encoded HMAC-SHA256 Signature
@@ -31,7 +31,7 @@ The size of base32 encoded HMAC-SHA256 signature is 52 bytes.
 
 We use Dustin Lundquist's [dlundquist/sniproxy] (https://github.com/dlundquist/sniproxy) as the implementation. 
 
-The program itself does not support signature verication. I modify the source code to implement the feature. You can check out the [diff](https://github.com/dlundquist/sniproxy/compare/master...BookGin:master) on Github.
+The program itself does not support signature verification. I modify the source code to implement the feature. You can check out the [diff](https://github.com/dlundquist/sniproxy/compare/master...BookGin:master) on GitHub.
 
 ```sh
 git clone https://github.com/bookgin/sniproxy
