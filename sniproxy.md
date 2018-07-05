@@ -29,7 +29,7 @@ The size of base32 encoded HMAC-SHA256 signature is 52 bytes.
 
 ## Install SNI Proxy
 
-We use Dustin Lundquist's [dlundquist/sniproxy] (https://github.com/dlundquist/sniproxy) as the implementation. 
+We use Dustin Lundquist's [dlundquist/sniproxy](https://github.com/dlundquist/sniproxy) as the implementation. 
 
 The program itself does not support signature verification. I modify the source code to implement the feature. You can check out the [diff](https://github.com/dlundquist/sniproxy/compare/master...BookGin:master) on GitHub.
 
