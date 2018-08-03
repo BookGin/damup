@@ -1,25 +1,30 @@
 # SNI Proxy
 
-The SNI Proxy server is installed on the Proxy. It will compute the HMAC-SHA256 of the Client ID in the hostname. 
+The SNI Proxy server is installed on the Proxy. It will compute the HMAC-SHA256 of the Client ID and UNIX timestamp in the hostname. 
 
-The hostname should consist of Client ID and base32 encoded HMAC-SHA256. They have to 10, 52 bytes respectively, separated with a hyphen `-`.
+The hostname should consist of Client ID , UNIX timestamp, and base32 encoded HMAC-SHA256.
 
 For example, this is a valid format:
 
-`jackhammer-rdcntwdk3qyn31zbz1oqkwdsghupezox3daa3rokqmub1qyd3kga.example.com`
+`jackhammer.1533292236.3gdzbmwfy0y3nbdp4hkuozop33k435ie1244fwqq22lr5qjil55a.example.com`
 
 - Client ID: `jackhammer`
-- base32 encoded HMAC-SHA256: `rdcntwdk3qyn31zbz1oqkwdsghupezox3daa3rokqmub1qyd3kga`
+- UNIX timestamp (the token is valid until): 1533292236
+- base32 encoded HMAC-SHA256 of `jackhammer.1533292236`: `3gdzbmwfy0y3nbdp4hkuozop33k435ie1244fwqq22lr5qjil55a`
 
 ## Design
 
 ### Client ID
 
-The Client ID is a 10-byte case-insensitive alphanumeric id.
+The Client ID consists of case-insensitive alphanumeric characters. The length should be less than 64 bytes.
 
 Possible issues:
-- The entropy of Client ID is 2^50. If it's generated randomly, there may be collision when the Client ID is more than 2^25 (33 millions).
 - ISP or a middlebox can leverage the Client ID/HMAC signature to trace the user.
+- A possible solution is to rotate the Client ID every T seconds.
+
+### Valid-Until UNIX Timestamp
+
+The token is expired after the UNIX timestamp.
 
 ### Base32 Encoded HMAC-SHA256 Signature
 
