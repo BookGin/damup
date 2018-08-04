@@ -78,10 +78,11 @@ listener 127.0.0.1:443 {
 }
 
 table damup {
-    HMAC-SHA256-SECRET-KEY 140.112.31.105:443
+    HMAC-SHA256-SECRET-KEY 192.168.1.1:443
 }
 ```
 
+- Replace the `192.168.1.1:8080` with the internal IP address of the origin server.
 - Only the table named `damup` will implement DAMUP features.
 - In the `damup` table, it should only be one entry. Other entries are simply ignored.
 - The entry should contains the HMAC-SHA256 secret key.
