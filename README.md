@@ -1,10 +1,18 @@
-# DAMUP: Practical and Privacy-aware Cloud-based DDoS Mitigation
+# Challenges in Realizing Privacy-aware Cloud-based DDoS Mitigation Mechanism
 
-Lin, Su-Chin, Po-Wei Huang, Hsin-Yi Wang, and Hsu-Chun Hsiao. "DAMUP: Practical and Privacy-aware Cloud-based DDoS Mitigation."
+Su-Chin Lin, Wei-Ning Chen and Hsu-Chun Hsiao.
+
+Accepted for poster in 27th USENIX Security Symposium (USENIX Security 18).
+
+[Poster-draft](release/poster-draft.pdf)
+
+## Previous work 
+
+Su-Chin Lin, Po-Wei Huang, Hsin-Yi Wang, and Hsu-Chun Hsiao. "DAMUP: Practical and Privacy-aware Cloud-based DDoS Mitigation"
 
 In 4th IEEE/IFIP Workshop on Security for Emerging Distributed Network Technologies (DISSECT), 2018.
 
-[Paper](https://www.csie.ntu.edu.tw/~hchsiao/pub/2018_IEEE_DISSECT.pdf)
+[Paper](release/damup.pdf)
 
 ## Implementation
 
