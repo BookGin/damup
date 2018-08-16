@@ -44,7 +44,7 @@ cd sniproxy
 # You can safely ignore the error: debchange: command not found
 ./autogen.sh
 # HMAC requires linking to OpenSSL library
-env CFLAGS='-lcrypto' ./configure --prefix=INSTALL_PREFIX
+env LIBS='-lcrypto' ./configure --prefix=INSTALL_PREFIX
 make -j`nproc`
 make install
 ```
