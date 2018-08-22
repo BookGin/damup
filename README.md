@@ -2,9 +2,10 @@
 
 Su-Chin Lin, Wei-Ning Chen and Hsu-Chun Hsiao.
 
-Accepted for poster in 27th USENIX Security Symposium (USENIX Security 18).
+Accepted as a poster in 27th USENIX Security Symposium (USENIX Security 18)
 
 [Poster-draft](release/poster-draft.pdf)
+[Poster](release/poster.pdf)
 
 ## Previous work 
 
