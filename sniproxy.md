@@ -41,7 +41,7 @@ We use Dustin Lundquist's [dlundquist/sniproxy](https://github.com/dlundquist/sn
 The program itself does not support signature verification. I modify the source code to implement the feature. You can check out the [diff](https://github.com/dlundquist/sniproxy/compare/master...BookGin:master) on GitHub.
 
 ```sh
-git clone https://github.com/bookgin/sniproxy
+git clone https://github.com/csienslab/sniproxy
 cd sniproxy
 # You can safely ignore the error: debchange: command not found
 ./autogen.sh
